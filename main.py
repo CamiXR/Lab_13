@@ -42,7 +42,6 @@ real_lines = [x for x in lines if x != ""]
 print("Строк в файле:", len(real_lines))
 #Задание 5
 class Streamer:
-<<<<<<< HEAD
     def __init__(self, nickname, subscribers, donates):
         self.nickname = nickname
         self.subscribers = subscribers
@@ -59,19 +58,6 @@ class Streamer:
             total = total + i
         return total
     
-=======
-    def __init__(self, nickname, subscribers):
-        self.nickname = nickname
-        self.subscribers = subscribers
-        self.donates = []   # список сумм донатов
-
-    def add_donate(self, amount):
-        self.donates.append(amount)
-
-    def total_donates(self):
-        return sum(self.donates)
-
->>>>>>> c54345c19dd59661b7009129a083a6e5a241e150
     def average_donate(self):
         if len(self.donates) == 0:
             return 0
@@ -92,7 +78,6 @@ a.subscribers == b.subscribers
 a.donates == b.donates
 print ("Тест пройден")
 
-<<<<<<< HEAD
 
 
 def save_to_file(objects, filename):
@@ -140,17 +125,6 @@ print("Загружено героев:", len(missing))
 PLAYER_FILE = "player.txt"
 class Player:
     def __init__(self, name, points=0, level=1):
-=======
-streamer = Streamer("GolubKin", 1200)
-streamer.add_donate(500)
-streamer.add_donate(150)
-print("Код класса Стример загружен")
-
-
-#Задание 2
-class Character:
-    def __init__(self, name, level):
->>>>>>> c54345c19dd59661b7009129a083a6e5a241e150
         self.name = name
         self.points = points
         self.level = level
@@ -290,29 +264,7 @@ players = [
     {"nickname": "THEMaster,gg", "level": 8, "score": 1550}    
 ]
 
-<<<<<<< HEAD
 save("players_stats.txt", players)
 loaded_players = load("players_stats.txt")
 print(loaded_players)
         
-=======
-def is_good_student(student):
-    return student.average_grade() >= 4
-
-a = Student("Иван Иванов", "13/9")
-a.add_grade(5)
-a.add_grade(4)
-a.add_grade(5)
-print_student(a)
-print("Отличник:", is_good_student(a))
-
-def print_stats(streamer):
-    print(f"Стример: {streamer.nickname}")
-    print(f"Подписчики: {streamer.subscribers}")
-    print(f"Всего донатов: {streamer.total_donates()}")
-    print(f"Средний донат: {streamer.average_donate()}")
-
-
-print_stats(streamer)
-
->>>>>>> c54345c19dd59661b7009129a083a6e5a241e150
